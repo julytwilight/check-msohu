@@ -17,7 +17,6 @@ develop-eggs
 .installed.cfg
 lib
 lib64
-test
 
 # Installer logs
 pip-log.txt
@@ -34,3 +33,6 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+test
+*.txt
