@@ -52,18 +52,27 @@ filter_href = [None, '#', '/', '?v=2&_once_=sohu_version_2', 'http://m.sohu.com/
                 '?v=1&_once_=sohu_version_1&_smuid=Auo7Wsl5w5doUGTjNcK3Mp']
 
 
+# 线程类
 class CheckThread(Thread):
     def __init__(self, qe, no):
         Thread.__init__(self)
         self._qe = qe # 队列
         self._no = no # 第几线程
+        self.threads = 0 # 判断线程的数量
 
     def run(self):
+        # 每运行一个线程线程+1
+        self.threads += 1
+
         while True:
-            if self._qe.qsize() > 0:
+            if self._qe.qsize() > 0: # 如果列队中还有Url则继续线程继续执行
                 self._work(self._qe.get(), self._no)
             else:
-                logging.shutdown()
+                # 当线程关闭-1
+                self.threads -= 1
+                # 如果线程都结束则关闭日志文件
+                if self.threads == 0:
+                    logging.shutdown()
                 break
 
     def _work(self, url, no):
@@ -73,6 +82,7 @@ class CheckThread(Thread):
 def check_page_links(url, no):
     print 'Worker: %d' % no
 
+    # 读取页面链接
     text = urlopen(url).read()
     soup = BeautifulSoup(text)
     links = soup.find_all('a')
@@ -86,20 +96,26 @@ def check_page_links(url, no):
 
     for link in links:
         href = link.get('href')
+
+        # 过滤不合法的href
         if href in filter_href:
             continue
         elif href.find('javascript', 0, 10) != -1:
             continue
 
+        # 获得完整的url
         correct_url = get_correct_url(href)
 
+        # 检查链接有效性
         get_url_msg(correct_url)
 
+        # 如果此url是m.sohu.com域下的url 并且 没有被检测过递归检查
         if correct_url.find('http://m.sohu.com/', 0, 19) == 0:
             if correct_url not in visited:
                 check_page_links(correct_url, no)
 
 
+# 获得完整的url
 def get_correct_url(url):
     uhost = urlparse(url)
     
@@ -113,6 +129,7 @@ def get_correct_url(url):
 def get_url_msg(url):
     # 生成错误信息
     message = '\n'
+    
     try:
         # 检查网址的开始时间
         utime = time.time()
@@ -124,16 +141,19 @@ def get_url_msg(url):
             message += (url + ': 链接失效, 错误编码: %d ' % code + '\n')
             message += '请求用时%f' % (time.time() - utime)
             message += '\n' + '#' * 50 + '\n'
+            # 写入日志
             write_log('warning', message)
     except Exception, e:
         message += (str(e) + '\n')
         message += ('错误url:' + url)
         message += '\n' + '*' * 50 + '\n'
+        # 写入日志
         write_log('error', message)
     finally:
         print message
 
 
+# 写入日志
 def write_log(log_type, message):
     if log_type == 'error':
         logging.error(message)
@@ -144,3 +164,4 @@ def write_log(log_type, message):
 if __name__ == '__main__':
     for i in range(0, WORKS_NUM):
         CheckThread(q, i + 1).start()
+
