@@ -2,7 +2,7 @@
 import os
 import logging
 import time
-from urllib import urlopen
+from urllib import urlopen, quote, urlencode
 from urlparse import urlparse, urljoin
 from httplib import HTTP
 from bs4 import BeautifulSoup
@@ -122,43 +122,40 @@ def get_correct_url(url):
     if uhost.netloc == "":
         url = urljoin(DOMAIN, url)
 
-    return url
+    return url.encode('utf-8')
 
 
 # 检查链接的有效性并生成信息
 def get_url_msg(url):
-    # 生成错误信息
-    message = '\n'
-    
+
+    print '\nURL: %s\n' % url
+
     try:
         # 检查网址的开始时间
         utime = time.time()
         code = urlopen(url).getcode()
         if code in [200, 302]:
-            message += (url + ': 成功访问')
-            message += '\n' + '-' * 50 + '\n'
+            print '访问成功'
+            print '\n' + '-' * 50 + '\n'
         else:
-            message += (url + ': 链接失效, 错误编码: %d ' % code + '\n')
-            message += '请求用时%f' % (time.time() - utime)
-            message += '\n' + '#' * 50 + '\n'
+            print 'Error Code: %s' % code
+            print '\n' + '#' * 50 + '\n'
             # 写入日志
-            write_log('warning', message)
+            write_log('warning', code, url, time.time() - utime)
     except Exception, e:
-        message += (str(e) + '\n')
-        message += ('错误url:' + url)
-        message += '\n' + '*' * 50 + '\n'
+        print str(e)
+        print '\n' + '*' * 50 + '\n'
         # 写入日志
-        write_log('error', message)
-    finally:
-        print message
+        write_log('error', str(e), url, time.time() - utime)
 
 
 # 写入日志
-def write_log(log_type, message):
+def write_log(log_type, message, url, run_time=0.0):
+    logger = '\n%s\n%s\n%f\n%s\n' % (url, message, run_time, '-'*50)
     if log_type == 'error':
-        logging.error(message)
+        logging.error(logger)
     elif log_type == 'warning':
-        logging.warning(message)
+        logging.warning(logger)
 
 
 if __name__ == '__main__':
