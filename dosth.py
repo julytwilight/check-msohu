@@ -112,7 +112,10 @@ def check_page_links(url, no):
         # 如果此url是m.sohu.com域下的url 并且 没有被检测过递归检查
         if correct_url.find('http://m.sohu.com/', 0, 19) == 0:
             if correct_url not in visited:
-                check_page_links(correct_url, no)
+                try:
+                    check_page_links(correct_url, no)
+                except Exception, e:
+                    write_log('error', str(e), correct_url)
 
 
 # 获得完整的url
