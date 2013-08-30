@@ -2,12 +2,16 @@
 import os
 import logging
 import time
-from urllib import urlopen, quote, urlencode
+import urllib2
 from urlparse import urlparse, urljoin
 from httplib import HTTP
 from bs4 import BeautifulSoup
 from Queue import Queue
 from threading import Thread, RLock
+from random import choice
+
+# ip代理
+iplist = ['1.9.189.65:3128', '27.24.158.130:80', '27.24.158.154:80']
 
 # 已访问的网址
 visited = []
@@ -25,7 +29,7 @@ DOMAIN = 'http://m.sohu.com'
 mylock = RLock()
 
 # 读取导航页面
-nav_text = urlopen(WEBSITE).read()
+nav_text = urllib2.urlopen(WEBSITE).read()
 
 # 页面soup
 nav_soup = BeautifulSoup(nav_text)
@@ -83,7 +87,7 @@ def check_page_links(url, no):
     print 'Worker: %d' % no
 
     # 读取页面链接
-    text = urlopen(url).read()
+    text = urllib2.urlopen(url).read()
     soup = BeautifulSoup(text)
     links = soup.find_all('a')
 
@@ -130,13 +134,18 @@ def get_correct_url(url):
 
 # 检查链接的有效性并生成信息
 def get_url_msg(url):
+    ip = choice(iplist)
+
+    proxy_support = urllib2.ProxyHandler({'http:':'http://' + ip})
+    opener = urllib2.build_opener(proxy_support)
+    urllib2.install_opener(opener)
 
     print '\nURL: %s\n' % url
 
     try:
         # 检查网址的开始时间
         utime = time.time()
-        code = urlopen(url).getcode()
+        code = urllib2.urlopen(url).getcode()
         if code in [200, 302]:
             print '访问成功'
             print '\n' + '-' * 50 + '\n'
@@ -150,6 +159,8 @@ def get_url_msg(url):
         print '\n' + '*' * 50 + '\n'
         # 写入日志
         write_log('error', str(e), url, time.time() - utime)
+
+    time.sleep(1)
 
 
 # 写入日志
