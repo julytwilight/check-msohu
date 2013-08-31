@@ -1,0 +1,275 @@
+2013-08-31 16:51:21,756 - WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2013-08-31 16:51:43,635 - WARNING: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fweibo.cn%2Fdpool%2Fttt%2Fshare.php%3Frt%3D%25E3%2580%258A%25E5%25B9%25BF%25E8%25A5%25BF%25E4%25B8%2580%25E5%25A4%25A7%25E5%25AD%25A6%25E7%2594%259F%25E5%259C%25A8%25E6%25A0%25A1%25E5%2586%2585%25E7%25A7%25AF%25E6%25B0%25B4%25E8%25B7%25AF%25E6%25AE%25B5%25E7%2596%2591%25E5%259B%25A0%25E8%25A7%25A6%25E7%2594%25B5%25E6%25AD%25BB%25E4%25BA%25A1%25E3%2580%258B%26ru%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F385545866%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26wm%3D4602%26tp%3D%26st%3D1377939084%26relateUid%3D1934323297&_once_=000022_sinaweibo_sharetov2_news&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2
+HTTP Error 403: Forbidden
+0.000000
+--------------------------------------------------
+
+2013-08-31 16:51:44,176 - WARNING: 
+http://m.sohu.com/c/15/
+nparsed != recved (0 != 1440) [<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache"/>
+<meta name="copyright" content="Copyright © 2012 Sohu.com Inc. All Rights Reserved." />
+<meta name="keywords" content="娱乐,八卦,明星,星闻"/>
+<meta name="description" content="提供最八卦最娱乐的手机娱乐新闻，发布最热辣的明星资讯、独家爆料、新闻报道、影视剧花边、音乐演出和明星时尚内容的资讯平台。"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.33,minimum-scale=1.0,maximum-scale=1.0"/>
+
+<title>娱乐频道-手机搜狐</title>
+<link rel="stylesheet" type="text/css" href="http://s3.rr.itc.cn/w/u/0/caibanyangshi_b.css" media="all" />
+
+
+</head>
+<body>
+<div class="w h PH">
+        <div class="as mysohu">
+            <a href="/sr/?redirect_url=http://m.i.sohu.com/m/&amp;_once_=000027_top_mysohuv2"><img src="http://s2.rr.itc.cn/w/u/0/mysohu_v2.png" /></a>
+        </div>
+        <h1 class="logo"><a href="/?_once_=000027_top_msohuv2&amp;_smuid=LLQQVRc4ERCdWuPHIDX7O&amp;v=2"><img src="http://s2.rr.itc.cn/w/u/0/msohu_v2.png" alt="手机搜狐" /></a></h1>
+    </div>
+
+<p class="w1 N2">搜狐娱乐</p>
+
+
+<div class="w1 N1">
+	<p>
+		<a href="/c/15/?_smui]
+0.000000
+--------------------------------------------------
+
+2013-08-31 16:52:01,840 - WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2013-08-31 16:55:16,717 - WARNING: 
+http://m.sohu.com/f/JRramaa/?_once_=000025_applications_camera_v2&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2
+socket.error: [Errno 60] Operation timed out
+0.000000
+--------------------------------------------------
+
+2013-08-31 16:55:57,037 - ERROR: 
+http://m.sohu.com/../html/index.php?pub=chens@wap.sohu.com1
+400 Bad Request
+0.300335
+--------------------------------------------------
+
+2013-08-31 16:55:57,347 - WARNING: 
+http://m.sohu.com/../html/index.php?pub=chens@wap.sohu.com1
+HTTP Error 400: Bad Request
+0.000000
+--------------------------------------------------
+
+2013-08-31 16:59:20,919 - WARNING: 
+http://m.sohu.com/f/f2iyyaa/?_once_=000025_applications_inputmethod_v2&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2
+socket.error: [Errno 60] Operation timed out
+0.000000
+--------------------------------------------------
+
+2013-08-31 17:05:21,974 - WARNING: 
+http://m.sohu.com/n/385130293/
+[Errno 9] Bad file descriptor
+0.000000
+--------------------------------------------------
+
+2013-08-31 17:34:58,930 - WARNING: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fservice.weibo.com%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E5%252588%252598%2525E6%252599%252593%2525E5%2525BA%252586%2525E8%2525B5%2525B4%2525E7%2525BE%25258E%2525E7%2525BB%252593%2525E5%2525A9%25259A%252520%2525E7%2525BB%25258F%2525E7%2525BA%2525AA%2525E4%2525BA%2525BA%2525E8%2525BE%25259F%2525E8%2525B0%2525A3%2525EF%2525BC%25259A%2525E5%2525B0%25258F%2525E4%2525BC%252599%2525E4%2525BC%2525B4%2525E4%2525BB%2525AC%2525E6%252583%25258A%2525E5%252591%252586%2525E4%2525BA%252586%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F384396126%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3Dhttp%253A%252F%252Fs7.rr.itc.cn%252Forg%252FwapChange%252F20138_19_9%252Fa0fnyz5418215363217.jpg%26ralateUid%3D1934323297%26size%3Dmiddle&_once_=000022_sinaweibo_sharetov3_news
+<urlopen error [Errno 60] Operation timed out>
+0.000000
+--------------------------------------------------
+
+2013-08-31 17:52:16,414 - ERROR: 
+http://m.sohu.com/f/vuuQJza/?_once_=000025_applications_video_v2&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2
+HTTP Error 504: Gateway Time-out
+3.736762
+--------------------------------------------------
+
+2013-08-31 17:52:18,306 - WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2013-08-31 17:53:05,214 - WARNING: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fweibo.cn%2Fdpool%2Fttt%2Fshare.php%3Frt%3D%25E3%2580%258A%25E5%25B9%25BF%25E8%25A5%25BF%25E4%25B8%2580%25E5%25A4%25A7%25E5%25AD%25A6%25E7%2594%259F%25E5%259C%25A8%25E6%25A0%25A1%25E5%2586%2585%25E7%25A7%25AF%25E6%25B0%25B4%25E8%25B7%25AF%25E6%25AE%25B5%25E7%2596%2591%25E5%259B%25A0%25E8%25A7%25A6%25E7%2594%25B5%25E6%25AD%25BB%25E4%25BA%25A1%25E3%2580%258B%26ru%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F385545866%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26wm%3D4602%26tp%3D%26st%3D1377942762%26relateUid%3D1934323297&_once_=000022_sinaweibo_sharetov2_news&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2
+HTTP Error 403: Forbidden
+0.000000
+--------------------------------------------------
+
+2013-08-31 17:53:13,285 - WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2013-08-31 17:54:17,425 - ERROR: 
+http://shouji.sogou.com/proxy/keyupdate.php?fawap=tian_tian_liu_lan_qi&url=http://tiantiango.cn/download.action?channelCode=607
+<urlopen error timed out>
+5.188298
+--------------------------------------------------
+
+2013-08-31 17:54:23,515 - ERROR: 
+http://shouji.sogou.com/proxy/keyupdate.php?fawap=jing_pin_dao_hang&url=http://wap98.com
+<urlopen error [Errno 54] Connection reset by peer>
+0.775019
+--------------------------------------------------
+
+2013-08-31 17:54:37,018 - ERROR: 
+http://news.wap.sohu.com/t/it/phonecenter/view/index.jsp?fr=gwsjk&v=2
+<urlopen error timed out>
+5.116167
+--------------------------------------------------
+
+2013-08-31 17:54:44,412 - ERROR: 
+http://news.wap.sohu.com/blog/it/?pg=blogIndex&&domain=mobile-sogou&v=2
+<urlopen error timed out>
+5.001411
+--------------------------------------------------
+
+2013-08-31 17:54:50,416 - ERROR: 
+http://news.wap.sohu.com/suggest/suggest.jsp?v=2
+<urlopen error timed out>
+5.001799
+--------------------------------------------------
+
+2013-08-31 17:57:05,982 - ERROR: 
+http://m.sohu.com/../html/index.php?pub=chens@wap.sohu.com1
+HTTP Error 400: Bad Request
+0.257121
+--------------------------------------------------
+
+2013-08-31 17:57:07,245 - WARNING: 
+http://m.sohu.com/../html/index.php?pub=chens@wap.sohu.com1
+HTTP Error 400: Bad Request
+0.000000
+--------------------------------------------------
+
+2013-08-31 18:02:33,298 - ERROR: 
+http://m.sohu.com/t2/rd.jsp?path=http%3A%2F%2Fm.sohu.com%2Fn%2F367774550%2F%3F_once_%3D000023_back2news_v3
+<urlopen error timed out>
+5.001786
+--------------------------------------------------
+
+2013-08-31 18:05:44,684 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fservice.weibo.com%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E5%2525A4%2525A7%2525E5%2525A5%252596%2525E8%2525B5%25259B%2525E5%252589%25258D%2525E7%25259E%2525BB%2525EF%2525BC%25259A%2525E5%2525A5%2525B3%2525E6%25258E%252592%2525E6%25258B%2525A6%2525E9%252598%2525B2%2525E9%252587%25258D%2525E7%252582%2525AE%2525E6%252588%252590%2525E5%252585%2525B3%2525E9%252594%2525AE%252520%2525E6%252597%2525A5%2525E6%2525B3%2525B0%2525E6%25258F%252590%2525E5%252589%25258D%2525E7%2525BB%252583%2525E5%252585%2525B5%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F383151696%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3D%26ralateUid%3D1934323297%26size%3Dmiddle&_once_=000022_sinaweibo_sharetov3_news
+<urlopen error timed out>
+5.464965
+--------------------------------------------------
+
+2013-08-31 18:06:11,366 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fservice.weibo.com%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E5%2525B9%2525BF%2525E4%2525B8%25259C%2525E6%25258F%2525AD%2525E9%252598%2525B3%2525E5%252589%2525AF%2525E5%2525B8%252582%2525E9%252595%2525BF%2525E6%25258E%2525A5%2525E5%25258F%252597%2525E7%2525BB%252584%2525E7%2525BB%252587%2525E8%2525B0%252583%2525E6%25259F%2525A5%252520%2525E6%2525B6%252589%2525E5%2525AB%25258C%2525E4%2525B8%2525A5%2525E9%252587%25258D%2525E8%2525BF%25259D%2525E7%2525BA%2525AA%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F367457423%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3D%26ralateUid%3D1934323297%26size%3Dmiddle&_once_=000022_sinaweibo_sharetov3_news
+<urlopen error timed out>
+5.435492
+--------------------------------------------------
+
+2013-08-31 18:29:02,830 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F385170842%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3DESPN%25E7%2590%2583%25E8%25BF%25B7%25E7%259C%258B%25E8%25A1%25B0%25E9%25BA%25A6%25E8%2592%2582%25E8%25BF%259B%25E5%2590%258D%25E4%25BA%25BA%25E5%25A0%2582%2B68%2525%25E8%25AE%25A4%25E5%25AE%259A%25E9%25BA%25A6%25E8%2592%2582%25E6%25B2%25A1%25E8%25B5%2584%25E6%25A0%25BC%26sid%3D603345292024&_once_=000022_aifenxiang_sharetov3_news
+HTTP Error 500: Internal Server Error
+0.469863
+--------------------------------------------------
+
+2013-08-31 18:36:59,274 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F369746746%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3D%25E5%25BD%25A9%25E6%25B0%2591%25E5%2587%25BA%25E5%25B7%25AE%25E4%25B8%258D%25E5%25BF%2598%25E4%25B9%25B0%25E5%25BD%25A9%25E7%25A5%25A8%2B%25E6%2589%2593%25E7%2594%25B5%25E8%25AF%259D%25E8%25B5%258A%25E8%25B4%25A6%25E6%258A%2595%25E6%25B3%25A8%25E5%2591%25BD%25E4%25B8%25AD1016%25E4%25B8%2587%26sid%3D603345292024&_once_=000022_aifenxiang_sharetov3_news
+<urlopen error timed out>
+5.310140
+--------------------------------------------------
+
+2013-08-31 18:59:59,451 - ERROR: 
+http://t.cn/zQ3MCNm
+<urlopen error timed out>
+6.700943
+--------------------------------------------------
+
+2013-08-31 19:00:09,696 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F384354428%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3D%25E4%25B8%258A%25E6%25B5%25B7%25E9%25AB%2598%25E9%2599%25A2%25E4%25BB%25A3%25E9%2599%25A2%25E9%2595%25BF%25E8%25A2%25AB%25E4%25B8%25BE%25E6%258A%25A5%25E8%25B4%25AA%25E8%2585%2590%2B%25E6%25AF%258F%25E5%25B9%25B4%25E5%2581%25B7%25E6%258B%25BF6%25E5%2590%25A8%25E8%258C%2585%25E5%258F%25B0%26sid%3D603345292024&_once_=000022_aifenxiang_sharetov3_news
+<urlopen error timed out>
+5.686478
+--------------------------------------------------
+
+2013-08-31 19:01:33,171 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F375398635%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3D%25E5%258F%25B0%25E6%25B9%25BE%25E4%25B8%2580%25E6%25B8%2594%25E8%2588%25B9%25E9%2581%25AD%25E8%258F%25B2%25E5%25BE%258B%25E5%25AE%25BE%25E5%2586%259B%25E8%2588%25B0%25E5%25B0%2584%25E5%2587%25BB%2B%25E4%25B8%2580%25E5%2590%258D%25E8%2588%25B9%25E5%2591%2598%25E9%2581%2587%25E5%25AE%25B3%26sid%3D603345292024&_once_=000022_aifenxiang_sharetov3_news
+<urlopen error timed out>
+5.506712
+--------------------------------------------------
+
+2013-08-31 19:03:30,640 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fservice.weibo.com%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E5%2525AE%252589%2525E5%252580%25258D%2525E4%2525BB%25258A%2525E6%252597%2525A5%2525E4%2525B8%25258A%2525E5%25258D%252588%2525E9%2525A3%25259E%2525E6%25258A%2525B5%2525E9%252592%252593%2525E9%2525B1%2525BC%2525E5%2525B2%25259B%2525E9%252599%252584%2525E8%2525BF%252591%252520%2525E5%2525B0%252586%2525E5%252587%2525BA%2525E6%2525B5%2525B7%2525E5%2525B7%2525A1%2525E8%2525A7%252586%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F381853268%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3D%26ralateUid%3D1934323297%26size%3Dmiddle&_once_=000022_sinaweibo_sharetov3_news
+<urlopen error timed out>
+6.536625
+--------------------------------------------------
+
+2013-08-31 19:04:47,750 - ERROR: 
+http://m.sohu.com/cc/wap/passport/login?loginType=2&from=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F371839824%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3D%25E7%2594%25B7%25E5%25AD%2590%25E5%258C%25BB%25E9%2599%25A2%25E5%259D%25A0%25E6%25A5%25BC%25E8%25BA%25AB%25E4%25BA%25A1%2B%25E5%25A6%25BB%25E5%25AD%2590%25EF%25BC%259A%25E4%25BB%2596%25E8%2585%25BF%25E9%2583%25A8%25E9%25AA%25A8%25E6%258A%2598%25E6%2580%258E%25E4%25B9%2588%25E4%25B8%258B%25E5%25BA%258A%26sid%3D603345292024
+<urlopen error timed out>
+5.001794
+--------------------------------------------------
+
+2013-08-31 19:05:25,113 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fservice.weibo.com%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E6%252598%252594%2525E6%252597%2525A5%2525E5%2525A5%2525B3%2525E7%2525A5%25259E%2525E6%252598%2525BE%2525E8%252580%252581%252520%2525E5%252585%2525B3%2525E4%2525B9%25258B%2525E7%252590%2525B3%2525E6%25259E%252597%2525E9%25259D%252592%2525E9%25259C%25259E%2525E5%2525AE%25258C%2525E8%2525B4%2525A5%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F383378991%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3Dhttp%253A%252F%252Fs8.rr.itc.cn%252Forg%252FY%252FrJ%252FNzqiqVb.jpg%26ralateUid%3D1934323297%26size%3Dmiddle&_once_=000022_sinaweibo_sharetov3_news
+<urlopen error timed out>
+5.879192
+--------------------------------------------------
+
+2013-08-31 19:05:34,794 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fservice.weibo.com%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E7%252583%2525AD%2525E8%2525BE%2525A3%2525E8%2525AF%252584%25253A%2525E5%2525AB%252596%2525E5%2525A8%2525BC%2525E6%25259C%252589%2525E7%2525BD%2525AA%2525E6%252580%2525A7%2525E8%2525B4%2525BF%2525E8%2525B5%252582%2525E5%252592%25258B%2525E6%252597%2525A0%2525E7%2525BD%2525AA%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F385394552%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3Dhttp%253A%252F%252Fs8.rr.itc.cn%252Forg%252FwapChange%252F20138_29_16%252Fa9e5135782718141660.jpg%26ralateUid%3D1934323297%26size%3Dmiddle&_once_=000022_sinaweibo_sharetov3_news
+<urlopen error timed out>
+5.499750
+--------------------------------------------------
+
+2013-08-31 19:05:40,615 - ERROR: 
+http://weibo.com/signup/signup.php?from=zw&vsrc=app_sharepop&backurl=http%3A%2F%2Fservice.t.sina.com.cn%2Fshare%2Fshare.php%3Fappkey%3D217550396%26count%3Dn%26title%3D%2525E3%252580%25258A%2525E6%2525B1%25259F%2525E8%25258B%25258F%2525E4%2525B8%252580%2525E8%2525B6%2525B3%2525E6%2525B5%2525B4%2525E5%2525BA%252597%2525E7%252594%2525B7%2525E5%252591%252598%2525E5%2525B7%2525A5%2525E5%252588%2525BA%2525E6%25259D%252580%2525E5%2525A5%2525B3%2525E5%252590%25258C%2525E4%2525BA%25258B%2525E5%252590%25258E%2525E8%252587%2525AA%2525E6%25259D%252580%2525E5%25259D%2525A0%2525E6%2525A5%2525BC%2525E8%2525BA%2525AB%2525E4%2525BA%2525A1%2525E3%252580%25258B%26url%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F369290138%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26pic%3D%26ralateUid%3D1934323297%26size%3Dmiddle&showlogo=0&appsrc=cUcI1A
+<urlopen error timed out>
+5.538461
+--------------------------------------------------
+
+2013-08-31 19:08:11,500 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F383871048%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3D99%2525%25E7%2594%25B7%25E4%25BA%25BA%25E4%25B8%258D%25E7%259F%25A5%25E5%25A5%25B3%25E4%25BA%25BA%25E5%2596%259C%25E6%25AC%25A2%25E8%25BF%2599%25E4%25BA%259B%25E5%25B0%258F%25E8%258A%25B1%25E6%25A0%25B7%26sid%3D603345292024&_once_=000022_aifenxiang_sharetov3_news
+HTTP Error 500: Internal Server Error
+0.529179
+--------------------------------------------------
+
+2013-08-31 19:12:34,187 - WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2013-08-31 19:13:29,589 - WARNING: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fweibo.cn%2Fdpool%2Fttt%2Fshare.php%3Frt%3D%25E3%2580%258A%25E4%25B8%258A%25E6%25B5%25B7%25E5%25AE%259D%25E5%25B1%25B1%25E4%25B8%2580%25E5%2586%25B7%25E5%25BA%2593%25E6%25B6%25B2%25E6%25B0%25A8%25E6%25B3%2584%25E6%25BC%258F%25E6%25AD%25BB%25E4%25BA%25A115%25E4%25BA%25BA%25E3%2580%258B%26ru%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F385547713%252F%253F_once_%253D000019_share_sinaweibo_backfrom%26wm%3D4602%26tp%3Dhttp%253A%252F%252Fs7.rr.itc.cn%252Forg%252FwapChange%252F20138_31_14%252Fa4oheg8151004905660.jpg%26st%3D1377947583%26relateUid%3D1934323297&_once_=000022_sinaweibo_sharetov2_news&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2
+HTTP Error 403: Forbidden
+0.000000
+--------------------------------------------------
+
+2013-08-31 19:13:31,771 - WARNING: Some characters could not be decoded, and were replaced with REPLACEMENT CHARACTER.
+2013-08-31 19:13:48,627 - ERROR: 
+http://m.sohu.com/f/7Bbiyia/?_once_=000025_applications_AppCenter_v3
+<urlopen error timed out>
+5.000927
+--------------------------------------------------
+
+2013-08-31 19:14:08,763 - ERROR: 
+http://m.sohu.com/m/bookcontent/?book_id=129940&chapter_id=4547020
+<urlopen error timed out>
+5.002027
+--------------------------------------------------
+
+2013-08-31 19:14:47,325 - ERROR: 
+http://shouji.sogou.com/proxy/keyupdate.php?fawap=tian_tian_liu_lan_qi&url=http://tiantiango.cn/download.action?channelCode=607
+<urlopen error timed out>
+5.297694
+--------------------------------------------------
+
+2013-08-31 19:14:53,920 - ERROR: 
+http://shouji.sogou.com/proxy/keyupdate.php?fawap=jing_pin_dao_hang&url=http://wap98.com
+<urlopen error [Errno 54] Connection reset by peer>
+1.378394
+--------------------------------------------------
+
+2013-08-31 19:15:05,562 - ERROR: 
+http://news.wap.sohu.com/t/it/phonecenter/view/index.jsp?fr=gwsjk&v=2
+<urlopen error timed out>
+5.443427
+--------------------------------------------------
+
+2013-08-31 19:15:12,903 - ERROR: 
+http://news.wap.sohu.com/blog/it/?pg=blogIndex&&domain=mobile-sogou&v=2
+<urlopen error timed out>
+5.001559
+--------------------------------------------------
+
+2013-08-31 19:15:18,906 - ERROR: 
+http://news.wap.sohu.com/suggest/suggest.jsp?v=2
+<urlopen error timed out>
+5.001658
+--------------------------------------------------
+
+2013-08-31 19:15:19,219 - ERROR: 
+http://m.sohu.com/sr/?redirect_url=http%3A%2F%2Fgo.10086.cn%2Fishare.do%3Fu%3Dhttp%253A%252F%252Fm.sohu.com%252Fn%252F556279495%252F%253F_once_%253D000023_back2news_v3%26m%3Dt%26t%3D%25E5%2588%259B%25E5%25AF%258C%25E8%25AE%25B0%253A%25E4%25B8%25AD%25E5%259B%25BD%25E5%259F%258E%25E5%25B8%2582%25E6%2588%25BF%25E4%25BB%25B7%25E4%25B8%25BA%25E4%25BB%2580%25E4%25B9%2588%25E8%25BF%2599%25E4%25B9%2588%25E9%25AB%2598%26sid%3D603345292024&_once_=000022_aifenxiang_sharetov3_news
+<urlopen error timed out>
+5.399281
+--------------------------------------------------
+

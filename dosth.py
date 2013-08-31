@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from Queue import Queue
 from threading import Thread, RLock
 from random import choice
-from restkit import request
+# from restkit import request
 
 # 已访问的网址
 visited = []
@@ -81,11 +81,7 @@ def check_page_links(url, no):
     # global visited_num
     global checked_num
     print 'Worker: %d' % no
-
-    # 读取页面链接
-    text = urllib2.urlopen(url).read()
-    soup = BeautifulSoup(text)
-    links = soup.find_all('a')
+    print '进入页面: %s' % url
 
     # 线程添加已检测url时进行线程锁
     # mylock.acquire()
@@ -93,7 +89,8 @@ def check_page_links(url, no):
     # visited_num += 1
     # mylock.release()
 
-    print '进入页面: %s' % url
+    # 读取页面链接
+    links = get_all_links(url)
 
     for link in links:
         href = link.get('href')
@@ -112,6 +109,7 @@ def check_page_links(url, no):
         mylock.acquire()
         checked.append(correct_url)
         checked_num += 1
+        # 防止短时间内链接过于频繁
         if checked_num % 2000 == 0:
             time.sleep(5)
         mylock.release()
@@ -127,7 +125,14 @@ def check_page_links(url, no):
                 try:
                     check_page_links(correct_url, no)
                 except Exception, e:
-                    write_log('warning', str(e), correct_url)
+                    write_log('error', str(e), correct_url)
+
+
+# 读取页面链接
+def get_all_links(url):
+    text = urllib2.urlopen(url).read()
+    soup = BeautifulSoup(text)
+    return soup.find_all('a')
 
 
 # 获得完整的url
@@ -144,14 +149,50 @@ def get_correct_url(url):
 def get_url_msg(url):
     start_time = time.time()
 
-    # 改用restkit request提高http读取效率
-    r = request(url, follow_redirect=True)
-    # 花费时间
-    use_time = time.time() - start_time
+    # 改用restkit request提高http读取效率 *改用restkit后会出现程序读取网址终止现象 所以改回urlib2读取链接
+    # headers = {'GET': url,
+    #           'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36 OPR/15.0.1147.153'
+    # }
+    # r = request(url, follow_redirect=True, headers=headers)
+    # # 花费时间
+    # use_time = time.time() - start_time
 
-    if r.status[:3] not in ['200', '302']:
-        write_log('error', r.status, url, use_time)
-    print "RESULT: %s: %s (%f)" % (url, r.status, use_time)
+    # if r.status[:3] not in ['200', '302']:
+    #     write_log('error', r.status, url, use_time)
+    # print "RESULT: %s: %s (%f)" % (url, r.status, use_time)
+    
+    ip = choice(iplist)
+    proxy_support = urllib2.ProxyHandler({'http:':'http://' + ip})
+    opener = urllib2.build_opener(proxy_support)
+    urllib2.install_opener(opener)
+
+    req = urllib2.Request(url)
+    req.add_header('GET', url)
+    req.add_header('User-Agent', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.95 Safari/537.36 OPR/15.0.1147.153')
+
+    print '\nURL: %s\n' % url
+
+    try:
+        # 检查网址的开始时间
+        utime = time.time()
+        code = urllib2.urlopen(req, timeout=5).getcode()
+        if code in [200, 302]:
+            print '访问成功'
+            print '\n' + '-' * 50 + '\n'
+        else:
+            print 'Error Code: %s' % code
+            print '\n' + '#' * 50 + '\n'
+            # 写入日志
+            write_log('warning', code, url, time.time() - utime)
+    except Exception, e:
+        print str(e)
+        print '\n' + '*' * 50 + '\n'
+        # 写入日志
+        write_log('error', str(e), url, time.time() - utime)
+
+    # 防止短时间内链接过于频繁
+    time.sleep(1)
+
 
 
 # 写入日志
