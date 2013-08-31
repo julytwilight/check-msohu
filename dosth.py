@@ -9,12 +9,14 @@ from bs4 import BeautifulSoup
 from Queue import Queue
 from threading import Thread, RLock
 from random import choice
-
-# ip代理
-iplist = ['1.9.189.65:3128', '27.24.158.130:80', '27.24.158.154:80']
+from restkit import request
 
 # 已访问的网址
 visited = []
+visited_num = 0
+
+# ip代理地址
+iplist = ['1.9.189.65:3128', '27.24.158.130:80', '27.24.158.154:80']
 
 # 定义线程的数量
 WORKS_NUM = 3
@@ -52,8 +54,13 @@ filter_href = [None, '#', '/', '?v=2&_once_=sohu_version_2', 'http://m.sohu.com/
                 '?v=1&_once_=sohu_version_1&_smuid=B3c57lC0yV68YNhqcs02Ul', 
                 '?v=3&_once_=sohu_version_3&_smuid=B3c57lC0yV68YNhqcs02Ul',
                 'http://m.sohu.com/towww?_smuid=B3c57lC0yV68YNhqcs02Ul&v=2',
-                '?v=3&_once_=sohu_version_3&_smuid=Auo7Wsl5w5doUGTjNcK3Mp', 
+                '?v=3&_once_=sohu_version_3&_smuid=Auo7Wsl5w5doUGTjNcK3Mp',
                 '?v=1&_once_=sohu_version_1&_smuid=Auo7Wsl5w5doUGTjNcK3Mp']
+
+# gevent fatch
+def fetch(u):
+    r = request(u, follow_redirect=True, pool=pool)
+    print "RESULT: %s: %s (%s)" % (u, r.status, len(r.body_string()))
 
 
 # 线程类
@@ -84,6 +91,8 @@ class CheckThread(Thread):
 
 
 def check_page_links(url, no):
+    global visited_num
+
     print 'Worker: %d' % no
 
     # 读取页面链接
@@ -94,7 +103,10 @@ def check_page_links(url, no):
     # 线程添加已检测url时进行线程锁
     mylock.acquire()
     visited.append(url)
+    visited_num += 1
     mylock.release()
+
+    print '第%s个url' % visited_num
 
     print '进入页面: %s' % url
 
@@ -134,33 +146,16 @@ def get_correct_url(url):
 
 # 检查链接的有效性并生成信息
 def get_url_msg(url):
-    ip = choice(iplist)
+    start_time = time.time()
 
-    proxy_support = urllib2.ProxyHandler({'http:':'http://' + ip})
-    opener = urllib2.build_opener(proxy_support)
-    urllib2.install_opener(opener)
+    # 改用restkit request提高http读取效率
+    r = request(url, follow_redirect=True)
+    # 花费时间
+    use_time = time.time() - start_time
 
-    print '\nURL: %s\n' % url
-
-    try:
-        # 检查网址的开始时间
-        utime = time.time()
-        code = urllib2.urlopen(url).getcode()
-        if code in [200, 302]:
-            print '访问成功'
-            print '\n' + '-' * 50 + '\n'
-        else:
-            print 'Error Code: %s' % code
-            print '\n' + '#' * 50 + '\n'
-            # 写入日志
-            write_log('warning', code, url, time.time() - utime)
-    except Exception, e:
-        print str(e)
-        print '\n' + '*' * 50 + '\n'
-        # 写入日志
-        write_log('error', str(e), url, time.time() - utime)
-
-    time.sleep(1)
+    if r.status[:3] not in ['200', '302']:
+        write_log('error', r.status, url, use_time)
+    print "RESULT: %s: %s (%f)" % (url, r.status, use_time)
 
 
 # 写入日志
