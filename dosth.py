@@ -14,36 +14,23 @@ from restkit import request
 # 已访问的网址
 visited = []
 visited_num = 0
+checked = []
+checked_num = 0
+
 
 # ip代理地址
 iplist = ['1.9.189.65:3128', '27.24.158.130:80', '27.24.158.154:80']
 
 # 定义线程的数量
-WORKS_NUM = 3
+WORKS_NUM = 5
 
-# 页面入口 m.sohu.com导航页面
-WEBSITE = 'http://m.sohu.com/c/395/?_once_=000025_top_daohang_v2&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2'
+
 
 # 域名
 DOMAIN = 'http://m.sohu.com'
 
 # 线程锁
 mylock = RLock()
-
-# 读取导航页面
-nav_text = urllib2.urlopen(WEBSITE).read()
-
-# 页面soup
-nav_soup = BeautifulSoup(nav_text)
-
-# 获得需要检查的栏目
-bd2 = nav_soup.find_all('p', 'bd2')
-
-# 创建队列
-q = Queue(0)
-for b in bd2:
-    if b.a:
-        q.put(DOMAIN + b.a.get('href')) # 加入队列
 
 # 设置log
 logging.basicConfig(filename = os.path.join(os.getcwd(), time.strftime('%Y-%m-%d-') + 'log.txt'),
@@ -91,8 +78,8 @@ class CheckThread(Thread):
 
 
 def check_page_links(url, no):
-    global visited_num
-
+    # global visited_num
+    global checked_num
     print 'Worker: %d' % no
 
     # 读取页面链接
@@ -101,12 +88,10 @@ def check_page_links(url, no):
     links = soup.find_all('a')
 
     # 线程添加已检测url时进行线程锁
-    mylock.acquire()
-    visited.append(url)
-    visited_num += 1
-    mylock.release()
-
-    print '第%s个url' % visited_num
+    # mylock.acquire()
+    # visited.append(correct_url)
+    # visited_num += 1
+    # mylock.release()
 
     print '进入页面: %s' % url
 
@@ -121,6 +106,17 @@ def check_page_links(url, no):
 
         # 获得完整的url
         correct_url = get_correct_url(href)
+        if correct_url in checked:
+            continue
+
+        mylock.acquire()
+        checked.append(correct_url)
+        checked_num += 1
+        if checked_num % 2000 == 0:
+            time.sleep(5)
+        mylock.release()
+
+        print '第%s个url' % checked_num
 
         # 检查链接有效性
         get_url_msg(correct_url)
@@ -131,7 +127,7 @@ def check_page_links(url, no):
                 try:
                     check_page_links(correct_url, no)
                 except Exception, e:
-                    write_log('error', str(e), correct_url)
+                    write_log('warning', str(e), correct_url)
 
 
 # 获得完整的url
@@ -168,6 +164,22 @@ def write_log(log_type, message, url, run_time=0.0):
 
 
 if __name__ == '__main__':
+    # 页面入口 m.sohu.com导航页面
+    WEBSITE = 'http://m.sohu.com/c/395/?_once_=000025_top_daohang_v2&_smuid=B3c57lC0yV68YNhqcs02Ul&v=2'
+    # 读取导航页面
+    nav_text = urllib2.urlopen(WEBSITE).read()
+    # 页面soup
+    nav_soup = BeautifulSoup(nav_text)
+    # 获得需要检查的栏目
+    bd2 = nav_soup.find_all('p', 'bd2')
+    # 创建队列
+    q = Queue(0)
+    for b in bd2:
+        if b.a:
+            nav_url = DOMAIN + b.a.get('href')
+            q.put(nav_url) # 加入队列
+            checked.append(nav_url)
+
     for i in range(0, WORKS_NUM):
         CheckThread(q, i + 1).start()
 
